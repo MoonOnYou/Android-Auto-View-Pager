@@ -16,9 +16,13 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_height="36dp"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        android:background="#00ff00"
+        app:tabBackground="@drawable/selector_tab_banner"
         app:layout_constraintBottom_toBottomOf="@id/viewPager"
         app:layout_constraintLeft_toLeftOf="@id/viewPager"
         app:layout_constraintRight_toRightOf="@id/viewPager"/>

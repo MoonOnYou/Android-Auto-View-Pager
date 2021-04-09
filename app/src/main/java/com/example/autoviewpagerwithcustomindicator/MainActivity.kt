@@ -3,6 +3,7 @@ package com.example.autoviewpagerwithcustomindicator
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 import kotlin.concurrent.timer
 
 class MainActivity : AppCompatActivity() {
@@ -13,9 +14,12 @@ class MainActivity : AppCompatActivity() {
 
         var currentPage = 0
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
+        val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+
         val items = arrayListOf("안","녕","하","세","요")
         val adapter = Adapter(items)
         viewPager.adapter = adapter
+        tabLayout.setupWithViewPager(viewPager)
 
         // period 반복주기 설정
         timer(period = 1000) {
